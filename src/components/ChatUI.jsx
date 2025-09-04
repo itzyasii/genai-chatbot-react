@@ -28,14 +28,17 @@ const ChatUI = ({ formData }) => {
 
   const fetchResponse = async (message) => {
     try {
-      const response = await fetch("http://localhost:5000/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          sessionId: `${formData.name}-${formData.email}-session`,
-          message,
-        }),
-      });
+      const response = await fetch(
+        "https://genai-chatbot-node-production.up.railway.app/api/chat",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            sessionId: `${formData.name}-${formData.email}-session`,
+            message,
+          }),
+        }
+      );
 
       if (!response.ok || !response.body) {
         throw new Error("Network response was not OK");
