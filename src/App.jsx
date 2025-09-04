@@ -108,8 +108,19 @@ const App = () => {
         {/* Footer */}
         <footer className="mt-8 text-center text-gray-500 text-sm">
           <p>
-            Powered by DeepSeek-R1 AI Technology • Your conversations are secure
-            and private
+            Powered by Large Language Model AI Technology • Your conversations
+            are secure and private
+          </p>
+          <p className="mt-2">
+            Developed by:{" "}
+            <a
+              href="https://github.com/itzyasii"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-600 hover:underline font-medium transition-colors duration-300 hover:text-purple-800 hover:scale-105 inline-block"
+            >
+              ❤ Yasir Ali 💖
+            </a>
           </p>
         </footer>
       </div>
